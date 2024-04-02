@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html><head>
+    <style>
+
+h1
+{
+                font-family: 'Times New Roman', Times, serif;
+                color: RGB(76, 44, 44);
+                font-size: 50px;
+                background-color:RGB(222, 144, 86);
+                padding-bottom: 60px;
+                padding-top: 30px; 
+                margin-bottom: auto;   
+                margin-top: auto;
+                margin-left: auto;
+                margin-right: auto;
+                
+}
+p
+			{
+				font: size 60px;
+				font-family: 'Times New Roman', Times, serif;
+                margin-left: 500px;
+                margin-right: 500px;
+                
+                border-width: 10px;
+                border-color: RGB(110, 59, 21);
+
+			}
+a
+
+            {   
+                color: RGB(76, 44, 44);
+                font-size: 20px;
+                font-size: large;
+                font-weight: 700;
+                
+
+            }
+table
+            {
+                width: 100%;
+                border-color: rgb(150, 105, 81);
+                border: groove;
+                
+                
+
+            }
+th, td 
+           {
+                
+                text-align: center;
+           }
+
+
+
+
+
+
+
+
+
+a:hover {background-color: RGB(233, 182, 144)}
+
+body{
+    background-color: RGB(197, 186, 162);
+}
+
+
+    </style>
+    </head>
+<body>
+
+<center><h1>My To-Do list for today</h1>
+
+<img src="https://t3.ftcdn.net/jpg/01/00/65/64/360_F_100656447_xzaQm1D1p6oWUX4WCBX7LiDyD8Dw9sJw.jpg" width="60%">
+    
+    <div style="overflow-x: auto;">
+    <table border="9">
+   
+        {% for x in mylist  %}
+        <tr>
+        <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+        
+        <td>{{ x.task }}</td>
+        <td><a href="delete/{{ x.id }}">COMPLETED</a></td>
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
+
+        <p>
+            <a href="add/">Add a Task</a>
+            </p>
+
+    </center>
+
+
+
+</body>
+</html>

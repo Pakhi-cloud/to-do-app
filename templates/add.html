@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html><head>
+    <style>
+
+h1
+{
+                font-family: monospace;
+                font-size: 70px;
+                background-color:rgb(219, 174, 24);
+                padding-bottom: 60px;
+                padding-top: 30px;                
+}
+p
+			{
+				font-size: 30px;
+				font-family: cursive;
+                margin-left: 500px;
+                margin-right: 500px;
+                border-style: groove;
+                border-width: 10px;
+                border-color: darkgreen;
+
+			}
+a
+
+            {
+                color: darkgreen;
+                font-size: 20px;
+
+            }
+table
+            {
+                width: 100%;
+                border-color: rgb(142, 119, 35);
+                border: groove;
+                
+                
+
+            }
+th, td 
+           {
+                
+                text-align: center;
+           }
+
+
+
+
+
+
+
+
+
+
+       
+    
+
+
+
+
+tr:hover {background-color: rgb(208, 164, 102);}
+
+    </style>
+    </head>
+<body bgcolor="blanchedalmond">
+
+<h1><center><u>My To-Do list</h1></u>
+   <center> 
+    <div style="overflow-x: auto;">
+    <table border="1">
+   
+        {% for x in mylist  %}
+        <tr>
+        <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+        
+        <td>{{ x.task }}</td>
+        <td><a href="delete/{{ x.id }}">COMPLETED</a></td>
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
+
+        <p>
+            <a href="add/">Add a Task</a>
+            </p>
+
+    </center>
+
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+             body
+        {
+                
+                background-color: blanchedalmond;
+        }
+    h1
+        {
+                font-family: monospace;
+                font-size: 50px;
+                background-color: rgb(208, 164, 102);
+                               
+        }
+    p
+        {
+                
+                font-size: 30px;
+                               
+        }
+    input
+        {
+            border-color: darkgreen;
+           
+
+        }
+        
+    
+
+
+
+
+       
+        </style>
+    </head>
+    <body> <center>
+<h1>Update Task</h1>
+
+<form action="updaterecord/{{ todoapp.id }}" method="post">
+{% csrf_token %}
+<p>
+Task:<br></p>
+<input name="task" value="{{ mylist.task }}">
+<br><br>
+
+<input type="submit" value="Submit">
+</form>
+
+</center>
+</body>
+</html>
